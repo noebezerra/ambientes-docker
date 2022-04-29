@@ -3,6 +3,7 @@ FROM node:16.14.2
 WORKDIR /usr/src/app
 COPY package*.json yarn.lock ./
 COPY . .
+VOLUME ./src
 RUN yarn install
 # expose port 3333 or 3000
 EXPOSE 3333
